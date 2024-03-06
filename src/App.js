@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import Logo from "./Components/Logo";
+import PackingList from "./Components/PackingList";
+import Stats from "./Components/Stats";
+import UserInputForm from "./Components/UserInputForm";
+import { useState } from "react";
 
 function App() {
+  const [items, setItems] = useState([]);
+
+  function handleAddItem(item) {
+    setItems((items) => [...items, item]);
+  }
+
+  function handleRemoveItem(id) {
+    setItems((items) => items.filter((item) => item.id !== id));
+  }
+
+  function handleToggleItem(id) {
+    setItems((items) =>
+      items.map((item) =>
+        item.id === id ? { ...item, packed: !item.packed } : item
+      )
+    );
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Logo />
+      <UserInputForm onAddItem={handleAddItem} />
+      <PackingList
+        itemsArray={items}
+        onDeleteItem={handleRemoveItem}
+        onToggleItem={handleToggleItem}
+      />
+      <Stats  itemsArray={items} />
+    </>
   );
 }
 
