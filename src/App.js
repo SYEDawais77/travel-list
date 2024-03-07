@@ -16,7 +16,10 @@ function App() {
   }
 
   function handleClearList(){
-    setItems([]);
+    let confirmed = window.confirm(
+      "Are you sure you want to clear the list?"
+    )
+    if(confirmed) setItems([]);
   }
 
   function handleToggleItem(id) {
