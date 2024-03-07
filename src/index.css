@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap);
 
-*{
+* {
   box-sizing: border-box;
 }
 body {
@@ -53,7 +53,6 @@ body {
 .user-input span {
   font-size: clamp(0.5rem, 1.5rem, 1.5rem);
   padding-right: 0.5rem;
-  
 }
 
 .drop-down {
@@ -96,7 +95,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
 }
 
 .packing-list ul li {
@@ -107,23 +106,21 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-
 }
 
-.packing-list-item-checkbox{
+.packing-list-item-checkbox {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.packing-item-span
-{
+.packing-item-span {
   padding-left: 0.5rem;
   font-family: "Ubuntu", sans-serif;
   font-size: 1.5rem;
 }
 
-.packing-item-button{
-  background-color:transparent;
+.packing-item-button {
+  background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 1.2rem;
@@ -131,15 +128,15 @@ body {
 }
 
 .action {
- position: absolute;
- bottom: 15px;
- right: 0;
- left: 0;
- display: flex;
- justify-content: center;
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
 }
 
-.action select,button {
+.action select {
   background-color: rgba(213, 224, 13, 0.95);
   font: "Ubuntu", sans-serif;
   font-weight: 600;
@@ -148,8 +145,16 @@ body {
   padding: 0.5rem;
   text-align: center;
 }
-
-
+.action
+button {
+  background-color: rgba(213, 224, 13, 0.95);
+  font: "Ubuntu", sans-serif;
+  font-weight: 600;
+  border-radius: 2rem;
+  padding: 0.7rem;
+  text-align: center;
+  margin-left: 0.5rem;
+}
 
 .stats-container {
   background-color: rgba(11, 145, 138, 0.95);
@@ -158,7 +163,7 @@ body {
   height: 11vh;
 }
 
-.stats-container p{
+.stats-container p {
   font-family: "Ubuntu", sans-serif;
   font-size: clamp(0.5rem, 1vh + 1rem, 1.5rem);
   font-weight: 500;
@@ -197,20 +202,19 @@ body {
     font-weight: 500;
     padding-left: 2rem;
   }
-  
 
   .user-input span {
     padding-right: 0.5rem;
     font-size: 1.5rem;
   }
-  
+
   .drop-down {
     font-size: 1.5rem;
     width: 3rem;
     text-align: center;
     margin-right: 0.5rem;
   }
-  
+
   .user-input input {
     text-align: left;
     font-size: 1.5rem;
