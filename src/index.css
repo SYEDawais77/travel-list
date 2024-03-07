@@ -79,6 +79,8 @@ body {
   font: inherit;
   border-radius: 2rem;
   width: 6rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .packing-list {
@@ -167,18 +169,16 @@ body {
   background-color: rgba(11, 145, 138, 0.95);
   padding: 0;
   margin: 0;
-  height: 11vh;;
+  height: 11vh;
 }
 
 .stats-container p{
   font-family: "Ubuntu", sans-serif;
-  font-size: clamp(0.5rem, 1.5rem, 1.5rem);
+  font-size: clamp(0.5rem, 1vh + 1rem, 1.5rem);
   font-weight: 500;
   padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
   margin: 0;
   text-align: center;
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -199,27 +199,27 @@ body {
     width: 6rem;
     height: 3rem;
     padding-left: 1rem;
-    padding-top: 1.2rem;
+    padding-top: 0.5rem;
   }
 
   .user-input {
     display: flex;
-    flex-direction: column;
     background-color: rgb(193, 91, 23);
-    height: 4rem;
+    height: 5.5rem;
     font-family: "Ubuntu", sans-serif;
     font-size: 1rem;
     font-weight: 500;
+    padding-left: 2rem;
   }
   
 
   .user-input span {
     padding-right: 0.5rem;
+    font-size: 1.5rem;
   }
   
   .drop-down {
-    font: inherit;
-    border-radius: 0.5rem;
+    font-size: 1.5rem;
     width: 3rem;
     text-align: center;
     margin-right: 0.5rem;
@@ -227,13 +227,17 @@ body {
   
   .user-input input {
     text-align: left;
-    font: inherit;
-    border-radius: 0.4rem;
-    width: 9rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    width: 15rem;
   }
   .user-input button {
-    font: inherit;
-    border-radius: 2rem;
-    width: 3rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    width: fit-content;
+  }
+
+  .stats-container {
+    height: 15vh;
   }
 }
