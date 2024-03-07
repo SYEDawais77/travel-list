@@ -15,6 +15,10 @@ function App() {
     setItems((items) => items.filter((item) => item.id !== id));
   }
 
+  function handleClearList(){
+    setItems([]);
+  }
+
   function handleToggleItem(id) {
     setItems((items) =>
       items.map((item) =>
@@ -31,6 +35,7 @@ function App() {
         itemsArray={items}
         onDeleteItem={handleRemoveItem}
         onToggleItem={handleToggleItem}
+        onClearList={handleClearList}
       />
       <Stats  itemsArray={items} />
     </>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import React from "react";
 
 // const initialItems = [
@@ -8,11 +9,23 @@ export default function PackingList({
   itemsArray,
   onDeleteItem,
   onToggleItem,
-}) {
+  onClearList,
+}) 
+{
+  const [sortBy, setSortBy] = useState("input");
+  
+  let sortedItems = itemsArray
+
+  if(sortBy === "input") sortedItems = itemsArray
+
+  if(sortBy === "description") sortedItems = itemsArray.slice().sort((a, b) => a.description.localeCompare(b.description))
+
+  if(sortBy === "packed") sortedItems = itemsArray.slice().sort((a, b) => Number(a.packed) - Number(b.packed))
+  
   return (
     <div className="packing-list">
       <ul>
-        {itemsArray.map((item) => (
+        {sortedItems.map((item) => (
           <li key={item.id}>
             <input
               type="checkbox"
@@ -39,6 +52,14 @@ export default function PackingList({
           </li>
         ))}
       </ul>
-    </div>
+      {sortedItems.length > 0 ? <div className="action">
+        <select value={sortBy}  onChange={(e) => setSortBy(e.target.value)}>
+          <option value="input">SORT BY INPUT ORDER</option>
+          <option value="description">SORT BY NAME</option>
+          <option value="packed">SORT BY PACKED</option>
+        </select>
+        <button onClick={onClearList}>Clear List</button>
+      </div> : null}
+    </div>  
   );
 }
