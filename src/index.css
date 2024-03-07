@@ -139,28 +139,14 @@ body {
  justify-content: center;
 }
 
-.action select{
-  font-family: "Ubuntu", sans-serif;
-  font-size: clamp(1.5rem, 0.5vw + 0.1rem, 1.5rem);
-  font-weight: 500;
-  background-color: rgba(228, 203, 13, 0.95);
+.action select,button {
+  background-color: rgba(213, 224, 13, 0.95);
+  font: "Ubuntu", sans-serif;
+  font-weight: 600;
   border-radius: 2rem;
   width: fit-content;
-  margin-right: 0.5rem;
-  text-align: center;
-  padding: 0.2rem;
-}
-
-.action button{
-  font-family: "Ubuntu", sans-serif;
-  font-size: clamp(1.5rem, 1.5vw + 0.5rem, 1.5rem);
-  font-weight: 500;
-  background-color: rgba(228, 203, 13, 0.95);
-  border-radius: 2rem;
-  width: fit-content;
-  margin-right: 0.5rem;
-  text-align: center;
   padding: 0.5rem;
+  text-align: center;
 }
 
 
